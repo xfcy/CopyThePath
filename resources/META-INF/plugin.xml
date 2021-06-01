@@ -1,0 +1,56 @@
+<idea-plugin>
+  <id>me.xfcy.idea.CopyThePath</id>
+  <name>Copy The Path</name>
+  <version>0.0.5</version>
+  <vendor email="xfcypc@foxmail.com" url="https://www.xfcy.me/">ChenY Wang</vendor>
+
+  <description><![CDATA[
+The function for this plugin is to copy the relative path from the project root directory of the files which has been opened in the edtior.<br>
+[Usage]<br>
+menu bar->Tools->Copy The Path->Copy The Path<br>
+or binding shortcut like ctrl+shift+c.<br>
+Then paste it to anywhere you want.<br>
+Plugin icon is from RemixIcon.<br>
+<br>
+这个插件可以复制编辑器中打开的文件相对于其所在项目根目录的相对路径。<br>
+[使用方式]<br>
+菜单栏->Tools->Copy The Path->Copy The Path<br>
+或者给他绑定一个快捷键，比如 ctrl+shift+c<br>
+然后在需要使用的地方粘贴。<br>
+插件图标来自RemixIcon。<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+1. Refactor the project with Kotlin.<br>
+2. Remove deprecated methods.<br>
+3. Add plugin icons, icons from RemixIcon.<br>
+4. <b><font color="red">I lost the code from the previous version, so this version is a complete rewrite. If you encounter that you can't read the previous configuration, or if the configured shortcuts don't work, please do the configuration again XD I'm sorry about that!</font></b>
+  ]]></change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <projectConfigurable parentId="tools" displayName="CopyThePath" id="tools.ChenY.CopyThePath" instance="me.xfcy.idea.copy_the_path.setting.SettingConfigurable" />
+    <projectService serviceImplementation="me.xfcy.idea.copy_the_path.setting.SettingState" />
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="me.xfcy.idea.copy_the_path.action_group"
+           text="Copy the Path"
+           popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <action id="me.xfcy.idea.copy_the_path.action.CopyAction"
+              class="me.xfcy.idea.copy_the_path.action.CopyAction"
+              text="_Copy the Path" description="Copy the Path">
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
