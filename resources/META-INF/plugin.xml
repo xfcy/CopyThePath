@@ -1,11 +1,12 @@
 <idea-plugin>
   <id>me.xfcy.idea.CopyThePathLegacy</id>
-  <name>Copy The Path</name>
+  <name>Copy The Path Legacy</name>
   <version>0.0.5l</version>
   <vendor email="xfcypc@foxmail.com" url="https://www.xfcy.me/">ChenY Wang</vendor>
 
   <description><![CDATA[
 The function for this plugin is to copy the relative path from the project root directory of the files which has been opened in the edtior.<br>
+Legacy version is for idea version 139-211.* <br>
 [Usage]<br>
 menu bar->Tools->Copy The Path->Copy The Path<br>
 or binding shortcut like ctrl+shift+c.<br>
@@ -26,8 +27,7 @@ https://github.com/xfcy/CopyThePath <br>
 1. Refactor the project with Kotlin.<br>
 2. Remove deprecated methods.<br>
 3. Add plugin icons, icons from RemixIcon.<br>
-4. Legacy version is for idea version 139-211.*. <br>
-5. <b><font color="red">I lost the code from the previous version,
+4. <b><font color="red">I lost the code from the previous version,
    so this version is a complete rewrite.
    If you encounter that you can't read the previous configuration,
    or if the configured shortcuts don't work,
