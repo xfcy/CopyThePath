@@ -23,7 +23,7 @@ class SettingState(var pathPrefix: String? = ""): PersistentStateComponent<Setti
 
     companion object {
         fun getInstance(project: Project): SettingState? {
-            return project.getService(SettingState::class.java)
+            return project.let { ServiceManager.getService(it, SettingState::class.java) }
         }
     }
 
