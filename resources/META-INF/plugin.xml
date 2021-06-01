@@ -18,13 +18,20 @@ Plugin icon is from RemixIcon.<br>
 或者给他绑定一个快捷键，比如 ctrl+shift+c<br>
 然后在需要使用的地方粘贴。<br>
 插件图标来自RemixIcon。<br>
+<br>
+https://github.com/xfcy/CopyThePath <br>
     ]]></description>
 
   <change-notes><![CDATA[
 1. Refactor the project with Kotlin.<br>
 2. Remove deprecated methods.<br>
 3. Add plugin icons, icons from RemixIcon.<br>
-4. <b><font color="red">I lost the code from the previous version, so this version is a complete rewrite. If you encounter that you can't read the previous configuration, or if the configured shortcuts don't work, please do the configuration again XD I'm sorry about that!</font></b>
+4. Legacy version is for idea version 139-211.*. <br>
+5. <b><font color="red">I lost the code from the previous version,
+   so this version is a complete rewrite.
+   If you encounter that you can't read the previous configuration,
+   or if the configured shortcuts don't work,
+   please do the configuration again XD I'm sorry about that!</font></b>
   ]]></change-notes>
 
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
