@@ -16,7 +16,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.util.xmlb.XmlSerializerUtil
 
 @State(
-        name = "CopyThePathConfig",
+        name = "CopyThePathLegacyConfig",
         storages = [Storage(StoragePathMacros.WORKSPACE_FILE)]
 )
 class SettingState(var pathPrefix: String? = ""): PersistentStateComponent<SettingState> {

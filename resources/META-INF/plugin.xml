@@ -1,7 +1,7 @@
 <idea-plugin>
-  <id>me.xfcy.idea.CopyThePath</id>
+  <id>me.xfcy.idea.CopyThePathLegacy</id>
   <name>Copy The Path</name>
-  <version>0.0.5</version>
+  <version>0.0.5l</version>
   <vendor email="xfcypc@foxmail.com" url="https://www.xfcy.me/">ChenY Wang</vendor>
 
   <description><![CDATA[
@@ -43,7 +43,7 @@ https://github.com/xfcy/CopyThePath <br>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <projectConfigurable parentId="tools" displayName="CopyThePath" id="tools.ChenY.CopyThePath" instance="me.xfcy.idea.copy_the_path.setting.SettingConfigurable" />
+    <projectConfigurable parentId="tools" displayName="CopyThePathLegacy" id="tools.ChenY.CopyThePathLegacy" instance="me.xfcy.idea.copy_the_path.setting.SettingConfigurable" />
     <projectService serviceImplementation="me.xfcy.idea.copy_the_path.setting.SettingState" />
   </extensions>
 
