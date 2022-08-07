@@ -35,7 +35,7 @@ Plugin icon is from RemixIcon.<br>
   ]]></description>
 
     <change-notes><![CDATA[
-1. Add "Copy Project Root" action(<a href="https://github.com/xfcy/CopyThePath/issues/1">issue #1</a>), now you can find it in menu bar, or binding a shortcut.
+1. Add "Copy Project Root" action(<a href="https://github.com/xfcy/CopyThePath/issues/1">issue #1</a>), now you can find it in menu bar, or binding a shortcut. <br>
 2. Fix some bugs and typo.
     ]]></change-notes>
 
