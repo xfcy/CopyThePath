@@ -1,0 +1,68 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>me.xfcy.idea.CopyThePath</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>CopyThePath</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="xfcypc@foxmail.com" url="https://www.cyouth.cn/">CYouth Wang</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+The function for this plugin is to copy the relative path from the project root directory of the files which has been opened in the editor. <br>
+Due to the incompatible methods, this plugin only supports IDEA version 201 or above. <br>
+To be compatible with older versions, I released Copy The Path Legacy, which is compatible with version 139-211.* <br>
+[Usage]<br>
+menu bar->Tools->Copy The Path->Copy The Path<br>
+or binding shortcut like ctrl+shift+c.<br>
+Then paste it to anywhere you want.<br>
+Plugin icon is from RemixIcon.<br>
+<br>
+这个插件可以复制编辑器中打开的文件相对于其所在项目根目录的相对路径。<br>
+由于出现不兼容的方法，因此本插件仅支持idea版本201以上。<br>
+为了兼容旧版本，我发布了 Copy The Path Legacy，它的兼容版本为139-211.* <br>
+[使用方式]<br>
+菜单栏->Tools->Copy The Path->Copy The Path<br>
+或者给他绑定一个快捷键，比如 ctrl+shift+c<br>
+然后在需要使用的地方粘贴。<br>
+插件图标来自RemixIcon。<br>
+  ]]></description>
+
+    <change-notes><![CDATA[
+1. Add "Copy Project Root" action(<a href="https://github.com/xfcy/CopyThePath/issues/1">issue #1</a>), now you can find it in menu bar, or binding a shortcut.
+2. Fix some bugs and typo.
+    ]]></change-notes>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <projectConfigurable parentId="tools" displayName="CopyThePath" id="tools.ChenY.CopyThePath" instance="me.xfcy.idea.copythepath.setting.SettingConfigurable" />
+        <projectService serviceImplementation="me.xfcy.idea.copythepath.setting.SettingState" />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="me.xfcy.idea.copythepath.action_group"
+               text="Copy the Path"
+               popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="me.xfcy.idea.copythepath.action.CopyAction"
+                    class="me.xfcy.idea.copythepath.action.CopyAction"
+                    text="_Copy the Path" description="Copy the Path">
+            </action>
+            <action id="me.xfcy.idea.copythepath.action.CopyProjectRootAction"
+                    class="me.xfcy.idea.copythepath.action.CopyProjectRootAction"
+                    text="Copy _Project Root" description="Copy project root">
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
